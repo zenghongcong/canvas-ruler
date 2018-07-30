@@ -18,18 +18,18 @@
 		<script>
 			var ruler = new Ruler({
 				elem: '#ruler',
-				width : document.getElementById('ruler').offsetWidth,
-		        height : 50,
-		        start : 0,
-		        end : 10000,
-		        capacity: 100,
-		        value : 0,
-		        unit : 10,
-		        linecolor : '#f00',
+				width : document.getElementById('ruler').offsetWidth, //画布宽
+		        height : 50, //画布高
+		        start : 0, //最小值
+		        end : 10000, //最大值
+		        capacity: 100, //每个刻度代表值
+		        value : 0, //当前值
+		        unit : 10, //刻度距离
+		        linecolor : '#f00', //线颜色
 		        scaleplate : {
 		        	
 		        },
-		        callback: function(val){
+		        callback: function(val){ //刻度值改变时回调
 		        	document.querySelector('.value').innerHTML = val;
 		        }
 			});
